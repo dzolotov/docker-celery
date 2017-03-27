@@ -1,8 +1,8 @@
-FROM python:3.5-slim
+FROM python:3.6-slim
 
 WORKDIR /opt/module
 
-ENV CELERY_VERSION 4.0.0rc7
+ENV CELERY_VERSION 4.0.2
 
 RUN pip install celery=="$CELERY_VERSION"
 
