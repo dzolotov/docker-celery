@@ -10,4 +10,6 @@ ENV CELERY_BROKER_URL amqp://guest@rabbit
 
 ENV C_FORCE_ROOT=true
 
+RUN echo "deb http://mirror.yandex.ru/debian/ stable main contrib non-free" >/etc/apt/sources.list && apt update -y && apt install -y git && rm -rf /var/cache/apt/*
+
 CMD [ "celery", "worker" ]
